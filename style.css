@@ -71,10 +71,10 @@ html.dark {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 500px;
 }
 
 .input-container {
+    margin: 0 10px;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -82,7 +82,7 @@ html.dark {
 }
 
 .input {
-    width: 70%;
+    width: 150px;
     height: 40px;
     padding: 10px;
     font-size: 1rem;
@@ -112,10 +112,9 @@ html.dark {
 
 .select-container {
     position: relative;
-    width: 40%;
+    width: 150px;
     height: 40px;
     border: 2px solid var(--secondary);
-
     border-radius: 5px;
 }
 
@@ -205,10 +204,22 @@ html.dark {
     opacity: 0;
 }
 
-@media only screen and (max-width: 1400px) {}
 
 @media only screen and (max-width: 800px) {
     body {
         font-size: 65%;
+    }
+
+    .title{
+        margin-top: 75px;
+    }
+
+    .form{
+        flex-direction: column;
+        height: unset;
+    }
+
+    .select-container{
+        margin-top: 10px;
     }
 }
