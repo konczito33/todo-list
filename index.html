@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="darkmode">
+            <button class="darkmode-btn"><i class="far fa-moon"></i></button>
+        </div>
+        <header class="header">
+            <h1 class="title">To Do List</h1>
+        </header>
+        <form class="form">
+            <div class="input-container">
+                <input placeholder="Type your tasks..." class="input" type="text">
+                <button class="add-btn" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="select-container">
+                <select name="todos" class="select">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
+        <div class="tasks-container">
+            <ul class="task-list">
+            </ul>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

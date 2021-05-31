@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #f8f9fa;
+    --secondary: #212529;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+html {
+    transition: all .3s;
+    background-color: var(--primary);
+}
+
+html.dark {
+    --primary: #212529;
+    --secondary: #f8f9fa;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.darkmode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+.darkmode-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary);
+    padding: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.header {
+    margin: auto;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.form {
+    position: relative;
+    height: 40px;
+    padding: 10px 10px;
+    margin: 50px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-container {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid var(--secondary);
+}
+
+.input {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    flex: 1;
+    border: none;
+    color: var(--secondary);
+    background-color: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    padding-left: 2px;
+    color: var(--secondary);
+}
+
+.add-btn {
+    height: 100%;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.select-container {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.select-container::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background-image: url('arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--secondary);
+    background-color: var(--primary);
+    transition: all .3s;
+}
+
+.tasks-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    position: relative;
+    display: flex;
+    min-width: 300px;
+    margin: 20px 0;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--secondary);
+    transition: .3s;
+    max-width: 100%;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.button {
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.task-check {
+    color: rgb(79, 216, 79);
+    margin-left: 30px;
+}
+
+.task-delete {
+    color: rgb(228, 25, 25);
+}
+
+.fas {
+    pointer-events: none;
+}
+
+.task-item.checked {
+    color: lightgreen;
+    border-color: lightgreen;
+}
+
+.task-item.delete {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 65%;
+    }
+
+    .title {
+        margin-top: 75px;
+    }
+
+    .form {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .select-container {
+        margin-top: 10px;
+    }
+}
